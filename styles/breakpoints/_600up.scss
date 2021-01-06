@@ -1,0 +1,58 @@
+/******************************************************************
+
+Stylesheet: 600px以上のタブレットやモニタで適用
+
+******************************************************************/
+.flex {
+    flex-direction: row;
+    // 折り返しを定義して　:wrapで包む
+    flex-wrap: wrap;
+}
+
+.travel {
+    &__inner{
+        padding: 50px 90px;
+    }
+    &__texts,
+    &__img {
+        flex-basis: 47%;
+    }
+
+    &__texts {
+        display: flex;
+        align-items: flex-end;
+    }
+}
+
+.houses {
+    &__item {
+        // 子要素のflex-basisをすると折り返す（要親要素にflex-wrap)
+        flex-basis: 50%;
+        margin-bottom: 60px;
+    }
+}
+
+.popular {
+    &__container {
+        justify-content: space-between;
+    }
+
+    &__item {
+        flex-basis: 47%;
+    }
+}
+
+
+.footer{
+
+    & .logo {
+        //flexを左寄せしたいならstart
+        justify-content: flex-start;
+    }
+
+    &__li{
+        //base.scssで全方向にmargin:10px掛けたので、左部分を消して列を揃える
+        margin-left: 0;
+        margin-right: 30px;
+    }
+}
